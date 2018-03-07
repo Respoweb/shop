@@ -1,0 +1,16 @@
+- fname: 'Arnaud'
+  lname: 'Chenudet'
+  image: 'profile-1.jpg'
+  description: "Nunc vero inanes flatus quorundam vile esse quicquid extra urbis pomerium nascitur aestimant praeter orbos et caelibes, nec credi potest qua obsequiorum diversitate coluntur homines sine liberis Romae."
+
+- fname: 'Ronan'
+  lname: 'Girault'
+  image: 'profile-2.jpg'
+  description: "Nunc vero inanes flatus quorundam vile esse quicquid extra urbis pomerium nascitur aestimant praeter orbos et caelibes, nec credi potest qua obsequiorum diversitate coluntur homines sine liberis Romae."
+
+
+- fname: 'Sahar'
+  lname: 'Guerbaa'
+  image: 'profile-3.jpg'
+  description: "Nunc vero inanes flatus quorundam vile esse quicquid extra urbis pomerium nascitur aestimant praeter orbos et caelibes, nec credi potest qua obsequiorum diversitate coluntur homines sine liberis Romae."
+

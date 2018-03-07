@@ -1,0 +1,109 @@
+---
+title: Boulangerie de quartier - Les meilleurs pains aux chocolat du monde
+---
+
+<div class="wrapper">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 50%), url(<%= image_path 'bakery-1.jpg'%>); min-height: calc(100vh - 70px);">
+        <div class="banner-content">
+          <div class="banner-title">
+            <h1>Boulangerie Place Viarme</h1>
+          </div>
+          <div class="banner-opening">
+            <p><strong>Journée continue du lundi au samedi </strong></p>
+            <p><strong>7h à 16h</strong></p>
+          </div>
+          <% data.offices.each do |office| %>
+            <p><%= office.address %> <%= office.postalcode %> <%= office.city %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrapper banner-spirit" style="background-image: url(<%= image_path 'bakery-2.jpg'%>); background-size: cover; min-height: calc(100vh - 70px); background-position: bottom center;">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3 mindspirit transparent-background">
+      <div class="spirit-content">
+        <h2>Du bon pain le matin <br> et sandwish le midi</h2>
+        <p>Quam ob rem cave Catoni anteponas ne istum quidem ipsum, quem Apollo, ut ais, sapientissimum iudicavit; huius enim facta, illius dicta laudantur. De me autem, ut iam cum utroque vestrum loquar, sic habetote. Homines enim eruditos et sobrios ut infaustos et inutiles vitant, eo quoque accedente quod et nomenclatores adsueti haec et talia venditare, mercede accepta lucris quosdam et prandiis inserunt subditicios ignobiles et obscuros.</p>
+        <p>Homines enim eruditos et sobrios ut infaustos et inutiles vitant, eo quoque accedente quod et nomenclatores adsueti haec et talia venditare.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrapper dark-green-background features">
+  <div class="row">
+    <% data.users.each do |user| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card-container">
+          <div class="card">
+            <div class="card-content">
+              <%= image_tag user.image, class: 'img-circle card-img'%>
+              <h2><%= user.fname %> <%= user.lname %></h2>
+              <p><%= user.description %></p>
+            </div>
+          </div>
+          <div class="card-footer">
+            <p>Pour vous servir </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div class="wrapper">
+  <div class="row">
+    <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+      <div class="infos-mobile">
+        <h3>Règlement</h3>
+        <p><i class="fa fa-money" aria-hidden="true"></i> Règlement par <strong>chèque</strong> ou <strong>espèces</strong>.</p>
+        <p><i class="fa fa-check" aria-hidden="true"></i> Prise en charge sur facture par la plupart des mutuelles.</p>
+
+
+        <h3>Adresse</h3>
+        <% data.offices.each do |office| %>
+            <p><i class="fa fa-home" aria-hidden="true"></i> <a href="https://www.google.fr/maps/place/103+Rue+de+la+Commune+de+1871,+44400+Rez%C3%A9/@47.1863931,-1.5546909,17z/data=!3m1!4b1!4m5!3m4!1s0x4805e95dc99e6f61:0x7afbc9868b0332ce!8m2!3d47.1863895!4d-1.5525022?hl=fr"><%= office.address %>, <%= office.postalcode %>, <%= office.city %></a>.</p>
+        <% end %>
+
+        <h3>Accessibilité</h3>
+        <p><i class="fa fa-wheelchair" aria-hidden="true"></i> Accessibilité aux personnes à mobilité réduite.</p>
+        <p><i class="fa fa-train" aria-hidden="true"></i> Tram 3 arrêt Place Viarme.</p>
+        <p><i class="fa fa-bus" aria-hidden="true"></i> Bus 98 arrêt Place Viarme.</p>
+        <p><i class="fa fa-bus" aria-hidden="true"></i> Bus 97 arrêt Place Viarme.</p>
+        <p><i class="fa fa-car" aria-hidden="true"></i> Parking payant sur la place.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrapper">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="map-container">
+        <div id="map"></div>
+        <div class="map-infos-container hidden-xs">
+          <h3>Règlement</h3>
+          <p><i class="fa fa-money" aria-hidden="true"></i> Règlement par <strong>Carte Bancaire</strong>, <strong>chèque</strong> ou <strong>espèces</strong>.</p>
+          <p><i class="fa fa-check" aria-hidden="true"></i> CB à partir d' 1 €.</p>
+
+
+          <h3>Adresse</h3>
+          <% data.offices.each do |office| %>
+              <p><i class="fa fa-home" aria-hidden="true"></i> <a href="https://www.google.fr/maps/place/103+Rue+de+la+Commune+de+1871,+44400+Rez%C3%A9/@47.1863931,-1.5546909,17z/data=!3m1!4b1!4m5!3m4!1s0x4805e95dc99e6f61:0x7afbc9868b0332ce!8m2!3d47.1863895!4d-1.5525022?hl=fr"><%= office.address %> <%= office.postalcode %> <%= office.city %></a>.</p>
+          <% end %>
+
+          <h3>Accessibilité</h3>
+          <p><i class="fa fa-wheelchair" aria-hidden="true"></i> Accessibilité aux personnes à mobilité réduite.</p>
+          <p><i class="fa fa-train" aria-hidden="true"></i> Tram 3 arrêt Place Viarme.</p>
+          <p><i class="fa fa-bus" aria-hidden="true"></i> Bus 98 arrêt Place Viarme.</p>
+          <p><i class="fa fa-bus" aria-hidden="true"></i> Bus 97 arrêt Place Viarme.</p>
+          <p><i class="fa fa-car" aria-hidden="true"></i> Parking payant sur la place.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
